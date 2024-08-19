@@ -2,6 +2,7 @@
 package persona;
 
 import java.util.Objects;
+import reloj.Reloj;
 
 /**
  *
@@ -11,8 +12,9 @@ public class Persona {
     String nombre;
     Integer edad;
     Double peso;
-    Double estatura;
-
+    Double estatura;    
+    Reloj reloj1 = null;
+    
     public Persona(String nombre, Integer edad, Double peso, Double estatura) {
         this.nombre = nombre;
         this.edad = edad;
@@ -90,7 +92,9 @@ public class Persona {
         }
         return Objects.equals(this.estatura, other.estatura);
     }
-    
+ 
+   
+        
     
     
     
