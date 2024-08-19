@@ -4,28 +4,48 @@
  */
 package reloj;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+
 /**
  *
  * @author santi
  */
 public class Reloj {
-    String dia;
-    String hora;
+    LocalDate dia;
+    LocalTime hora;
     String modelo;
-    long numSerie;
+    Long numSerie;
 
-    public Reloj(String dia, String hora, String modelo, long numSerie) {
+    
+    public Reloj(LocalDate dia, LocalTime hora, String modelo, Long numSerie) {
         this.dia = dia;
         this.hora = hora;
         this.modelo = modelo;
         this.numSerie = numSerie;
     }
-    
-    public String getDia() {
+
+    public LocalDate getDia() {
         return dia;
     }
 
-    public String getHora() {
+    public LocalTime getHora() {
         return hora;
+    }
+    
+    public void incrementarDia(){
+        dia.plusDays(1);
+    }
+    
+    public void incrementarHora(){
+        hora.plusHours(1);
+    }
+    
+    public void limpiarPantalla(){
+        
+    }
+    
+    public void traducirFrecuencia(){
+        
     }
 }
