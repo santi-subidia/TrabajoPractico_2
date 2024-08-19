@@ -92,7 +92,9 @@ public class Persona {
         }
         return Objects.equals(this.estatura, other.estatura);
     }
- 
+    public void decirHora() {
+        System.out.println("la hora es: "+reloj1.getHora());
+}
    
         
     
