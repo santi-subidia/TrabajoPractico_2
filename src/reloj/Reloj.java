@@ -42,10 +42,12 @@ public class Reloj {
     }
     
     public void limpiarPantalla(){
+        dia.atTime(0,0);
+        //No pude setear a 0
+        hora=null;
         
     }
     
     public void traducirFrecuencia(){
-        
     }
 }
