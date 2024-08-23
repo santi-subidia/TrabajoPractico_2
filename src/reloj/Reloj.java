@@ -48,6 +48,7 @@ public class Reloj {
         
     }
     
-    public void traducirFrecuencia(){
+    public void traducirFrecuencia(){       
+        System.out.println("frecuencia: ---");
     }
 }
