@@ -1,25 +1,22 @@
-
 package persona;
 
 import java.util.Objects;
 import reloj.Reloj;
 
-/**
- *
- * @author santi
- */
 public class Persona {
-    String nombre;
-    Integer edad;
-    Double peso;
-    Double estatura;    
-    Reloj reloj1 = null;
     
-    public Persona(String nombre, Integer edad, Double peso, Double estatura) {
+    private String nombre;
+    private Integer edad;
+    private Double peso;
+    private Double estatura;    
+    private final Reloj reloj;
+    
+    public Persona(String nombre, Integer edad, Double peso, Double estatura, Reloj reloj) {
         this.nombre = nombre;
         this.edad = edad;
         this.peso = peso;
         this.estatura = estatura;
+        this.reloj = new Reloj("Casio", 9998760001L);
     }
 
     public String getNombre() {
@@ -92,12 +89,9 @@ public class Persona {
         }
         return Objects.equals(this.estatura, other.estatura);
     }
+    
     public void decirHora() {
-        System.out.println("la hora es: "+reloj1.getHora());
-}
-   
-        
-    
-    
+        System.out.println("la hora es: " + reloj.getHora());
+    }
     
 }
