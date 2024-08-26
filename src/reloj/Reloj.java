@@ -1,26 +1,19 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package reloj;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.Month;
 
-/**
- *
- * @author santi
- */
 public class Reloj {
-    LocalDate dia;
-    LocalTime hora;
-    String modelo;
-    Long numSerie;
+    private LocalDate dia;
+    private LocalTime hora;
+    private String modelo;
+    private Long numSerie;
 
     
-    public Reloj(LocalDate dia, LocalTime hora, String modelo, Long numSerie) {
-        this.dia = dia;
-        this.hora = hora;
+    public Reloj(String modelo, Long numSerie) {
+        this.dia = LocalDate.now();
+        this.hora = LocalTime.now();
         this.modelo = modelo;
         this.numSerie = numSerie;
     }
@@ -30,25 +23,55 @@ public class Reloj {
     }
 
     public LocalTime getHora() {
-        return hora;
+        return hora.withNano(0).withSecond(0);
     }
     
     public void incrementarDia(){
-        dia.plusDays(1);
+        dia = dia.plusDays(1);
     }
     
     public void incrementarHora(){
-        hora.plusHours(1);
+        hora = hora.plusHours(1);
     }
     
     public void limpiarPantalla(){
-        dia.atTime(0,0);
-        //No pude setear a 0
-        hora=null;
-        
+        dia = LocalDate.of(2000, Month.JANUARY, 1);
+        hora = LocalTime.of(00, 00);
     }
     
     public void traducirFrecuencia(){       
-        System.out.println("frecuencia: ---");
+        System.out.println("frecuencia: ---"); //No entiendo a que se refieren con "Traducir frecuencia"
     }
+    
+    /**
+     * Prueba rapida.
+     */
+//    public static void main(String[] args) {
+//        
+//        Reloj rolex = new Reloj("Casio", 199784646L);
+//        
+//        /**
+//         * Fecha y Hora normal.
+//         */
+//        System.out.println("\nDay: " + rolex.getDia());
+//        System.out.println("Time: " + rolex.getHora());
+//        
+//        /**
+//         * Fecha y Hora adelantadas.
+//         */
+//        rolex.incrementarHora();
+//        rolex.incrementarDia();
+//        System.out.println("\nDay: " + rolex.getDia());
+//        System.out.println("Time: " + rolex.getHora());
+//        
+//        /**
+//         * Fecha y Hora reseteada.
+//         */
+//        rolex.limpiarPantalla();
+//        System.out.println("\nDay: " + rolex.getDia());
+//        System.out.println("Time: " + rolex.getHora());
+//        
+//        
+//    }
+    
 }
