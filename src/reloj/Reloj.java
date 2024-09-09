@@ -40,38 +40,7 @@ public class Reloj {
     }
     
     public void traducirFrecuencia(){       
-        System.out.println("frecuencia: ---"); //No entiendo a que se refieren con "Traducir frecuencia"
+        System.out.println("frecuencia: ---");
     }
-    
-    /**
-     * Prueba rapida.
-     */
-//    public static void main(String[] args) {
-//        
-//        Reloj rolex = new Reloj("Casio", 199784646L);
-//        
-//        /**
-//         * Fecha y Hora normal.
-//         */
-//        System.out.println("\nDay: " + rolex.getDia());
-//        System.out.println("Time: " + rolex.getHora());
-//        
-//        /**
-//         * Fecha y Hora adelantadas.
-//         */
-//        rolex.incrementarHora();
-//        rolex.incrementarDia();
-//        System.out.println("\nDay: " + rolex.getDia());
-//        System.out.println("Time: " + rolex.getHora());
-//        
-//        /**
-//         * Fecha y Hora reseteada.
-//         */
-//        rolex.limpiarPantalla();
-//        System.out.println("\nDay: " + rolex.getDia());
-//        System.out.println("Time: " + rolex.getHora());
-//        
-//        
-//    }
     
 }
